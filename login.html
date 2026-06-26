@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MediCare – Login</title>
+  <link rel="stylesheet" href="login.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="login-wrapper">
+    <div class="login-card">
+
+      <!-- Logo -->
+      <div class="login-logo">
+        <i class="fa-solid fa-hospital"></i>
+      </div>
+      <h2>MediCare HMS</h2>
+      <p class="login-sub">Hospital Management System</p>
+
+      <!-- Form -->
+      <form id="loginForm" novalidate>
+
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="loginUser" placeholder="Username" autocomplete="off"/>
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="loginPass" placeholder="Password"/>
+          <!-- Toggle password visibility -->
+          <button type="button" class="toggle-pass" id="togglePass" tabindex="-1">
+            <i class="fa-solid fa-eye" id="eyeIcon"></i>
+          </button>
+        </div>
+
+        <!-- Error message (hidden by default) -->
+        <p class="error-msg hidden" id="errorMsg">
+          <i class="fa-solid fa-circle-exclamation"></i> Invalid Username or Password
+        </p>
+
+        <button type="submit" class="btn-login">
+          Login &nbsp;<i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </button>
+
+      </form>
+
+      <p class="login-footer">MediCare &copy; 2025 &mdash; Secure Access</p>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
